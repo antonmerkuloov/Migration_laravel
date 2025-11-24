@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Создание заявления</title>
+    <title>Обновить заявление</title>
 </head>
 <body>
     <form method="POST" action="{{route('reports.store')}}">
@@ -11,7 +11,7 @@
         @csrf
         <input type="text" name="number" placeholder="Номер Авто">
         <textarea placeholder="Описание" name="description"></textarea>
-        <input type="submit" value="Создать">
+        <input type="submit" value="Обновить">
     </form>
 </body>
 </html>
