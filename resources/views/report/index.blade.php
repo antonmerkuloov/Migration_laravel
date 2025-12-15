@@ -11,10 +11,12 @@
     <p>{{ $report->created_at}}</p>
     <h1>{{ $report->number }}</h1>
     <p>{{ $report->description }}</p>
+     <a href="{{ route('reports.edit', $report->id) }}">Изменить заявление</a>
     <form method="POST" action="{{ route('reports.destroy', $report->id) }}">
         @method('delete')
         @csrf
         <input type="submit" value="Удалить">
+        
     </form>
     @endforeach
 </body>

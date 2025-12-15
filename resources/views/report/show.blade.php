@@ -6,11 +6,11 @@
     <title>Обновить заявление</title>
 </head>
 <body>
-    <form method="POST" action="{{route('reports.store')}}">
-        @method('post')
+    <form method="POST" action="{{route('reports.update', $report->id)}}">
         @csrf
-        <input type="text" name="number" placeholder="Номер Авто">
-        <textarea placeholder="Описание" name="description"></textarea>
+        @method('put')
+        <input type="text" name="number" placeholder="Номер Авто" value="{{ $report->number }}">
+        <textarea placeholder="Описание" name="description">{{ $report->description }}</textarea> 
         <input type="submit" value="Обновить">
     </form>
 </body>

@@ -10,4 +10,5 @@ class Report extends Model
 {
     use SoftDeletes;
     protected $guarded=[];
+    
 }
